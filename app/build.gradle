@@ -1,0 +1,40 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 20
+    buildToolsVersion "20.0.0"
+
+
+    defaultConfig {
+        applicationId "net.rmj.android.controlsdinamic"
+        minSdkVersion 11
+        targetSdkVersion 20
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+
+dependencies {
+
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:19.+'
+    // You must install or update the Support Repository through the SDK manager to use this dependency.
+    compile 'com.android.support:support-v4:19.+'
+    compile 'com.mcxiaoke.volley:library:1.0.0'
+
+    // follow this instuctions http://stackoverflow.com/questions/24506648/adding-local-aar-files-to-gradle-build-using-flatdirs-is-not-working
+    // 1. Add a jar or aar module through the wizrd, then add this below project(:name-of-project) is where the folder created after above step is
+    // CRI Library - From local repo (see above)
+    compile project(':cri-android-1.0.5')
+
+
+}
+
+
