@@ -27,9 +27,34 @@ public class OperatingSystemFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = null;
-        view = inflater.inflate(R.layout.fragment_layout, null);
 
-        TextView textView = (TextView) view.findViewById(R.id.textView1);
+        int pos=0;
+        Bundle bun = getArguments();
+        if (bun!=null){
+            pos = this.getArguments().getInt(OperatingSystemFragment.ARG_OS);
+
+        }
+
+        switch (pos)
+        {
+            case 1:
+                view = inflater.inflate(R.layout.fragment_relative_layout, null);
+                break;
+            case 2:
+                view = inflater.inflate(R.layout.fragment_frame_layout, null);
+                break;
+            case 3:
+                view = inflater.inflate(R.layout.fragment_linear_layout, null);
+                break;
+            default:
+                view = inflater.inflate(R.layout.fragment_operating_system, null);
+
+
+        }
+
+        return view;
+
+        /* TextView textView = (TextView) view.findViewById(R.id.textView1);
         //sets text of current selection on textView
         textView.setText(string);
 
@@ -62,17 +87,19 @@ public class OperatingSystemFragment extends Fragment {
         myLynearLayout.addView(valueB);
         myLynearLayout.addView(toggle);
 
-
         return view;
+        */
     }
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
     }
-    @Override
+
+    /* @Override
     public void setArguments(Bundle args) {
         string = args.getString(ARG_OS);
         fragment = args.getString(ARG_FRAG);
     }
+    */
 
 }

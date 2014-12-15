@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragmentContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/toMessage"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:hint="From"
+        android:layout_margin="5dp"
+        android:drawableRight="@drawable/abc_ic_voice_search"
+        />
+    <EditText
+        android:id="@+id/subjectMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Subject"
+        android:layout_margin="5dp"
+        android:drawableRight="@drawable/abc_ic_go"
+        />
+    <EditText
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:hint="Message"
+        android:gravity="top"
+        android:layout_weight="1"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:layout_margin="5dp"
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="right"
+        android:text="Send"
+        android:layout_marginBottom="15dp"
+        android:layout_margin="5dp"
+        />
+
+</LinearLayout> 

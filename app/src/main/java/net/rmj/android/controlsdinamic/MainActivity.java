@@ -176,7 +176,7 @@ public class MainActivity extends ActionBarActivity {
         Fragment fragment = new OperatingSystemFragment();
         Bundle args = new Bundle();
 
-        args.putString(OperatingSystemFragment.ARG_OS, mPlanetTitles[position]);
+        args.putInt(OperatingSystemFragment.ARG_OS, position);
 
         fragment.setArguments(args);
 
